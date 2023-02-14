@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Mikael Dev">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/responsive.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">  
+  <title>Projeto Cartão | Mikael Dev</title>
+
+</head>
+<body>
+  <main>
+    <div class="color"></div>
+    <div class="front-cont">
+      <div class="card-front">
+        <img src="src/img/bg-card-front.png" alt="card-front">
+        <div class="top-circles">
+          <div class="big"></div>
+          <div class="small"></div>
+        </div>
+        <div class="card-nums">
+          <div class="sub-nums">
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+          </div>
+          <div class="sub-nums">
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+          </div>
+          <div class="sub-nums">
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+          </div>
+          <div class="sub-nums">
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="name-exp">
+          <div class="name">
+            <p>Jane Appleseed</p>
+          </div>
+          <div class="exp">
+            <p class="month">00</p>
+            <p>/</p>
+            <p class="year">00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="back-cont">
+      <div class="card-back">
+        <img src="src/img/bg-card-back.png" alt="card-back">
+        <div class="cvc">
+          <p>000</p>
+        </div>
+      </div>
+    </div>
+    <div class="white">
+      <form onsubmit="checkError()">
+        <div class="card-holder">
+          <label for="name">card holder name</label><br>
+          <input type="text" name="cardholder" oninput="updateName()" id="name" placeholder="e.g. Jane Appleseed">
+          <p class="blank">Can't be blank</p>
+        </div>
+        <div class="card-number">
+          <label for="number">card number</label><br>
+          <input type="text" name="cardnumber" oninput="updateNums()" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+          <p class="blank">Can't be blank</p>
+          <p class="wrong">Wrong format, numbers only</p>
+        </div>
+        <div class="exp-cvc">
+          <div class="exp-date">
+            <label>exp.date (mm/yy)</label><br>
+            <input type="text" name="month" oninput="updateMonth()" id="month" placeholder="MM" maxlength="2">
+            <input type="text" name="year" oninput="updateYear()" id="year" placeholder="YY" maxlength="2">
+            <p class="blank">Can't be blank</p>
+            <p class="wrong">Wrong format, numbers only</p>
+          </div>
+          <div class="cvc-num">
+            <label for="cvc">cvc</label><br>
+            <input type="text" name="cvc" oninput="updateCvc()" id="cvc" placeholder="e.g. 123" maxlength="3">
+            <p class="blank">Can't be blank</p>
+            <p class="wrong">Wrong format, numbers only</p>
+          </div>
+        </div>
+        <div class="button"><button>Confirm</button></div>
+      </form>
+    </div>
+    <div class="white-success">
+      <div class="tick">
+        <img src="src/img/icon-complete.svg" alt="success">
+      </div>
+      <p class="thank">thank you!</p>
+      <p class="detail">We have added your card details</p>
+      <form onclick="reset()">
+        <div class="button"><button>Continue</button></div>
+      </form>
+    </div>
+  </main>
+<script src="src/js/index.js"></script>
+</body>
+</html>

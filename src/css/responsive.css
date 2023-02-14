@@ -1,0 +1,54 @@
+@media (min-width: 1024px) {
+    main {
+        max-width: 90rem;
+        display: flex;
+    }
+    img {
+        max-width: 22rem;
+    }
+    .color {
+        min-height: 100vh;
+        background-image: url(../img/bg-main-mobile.png);
+        width: 27rem;
+    }
+    .front-cont {
+        left: 12rem;
+    }
+    .top-circles .big {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+    .top-circles .small {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .card-nums {
+        top: 7rem;
+    }
+    .card-nums p {
+        font-size: 1.4rem;
+    }
+    .name-exp {
+        top: 10rem;
+        gap: 5rem;
+    }
+    .back-cont {
+        top: 21rem;
+        left: 17rem;
+    }
+    .cvc {
+        top: 5.4rem;
+        left: 17.5rem;
+    }
+    .cvc p{
+        font-size: 0.85rem;
+    }
+    .white, .white-success {
+        min-height: 100vh;
+        width: 63rem;
+        padding-top: 11rem;
+    }
+    .card-holder {
+        margin-top: 0;
+    }
+}
